@@ -1,13 +1,6 @@
 // 教务课表同步助手（内容脚本）
 // 注入到 jwxt.szpu.edu.cn/jwapp/* 页面中，同源 fetch 自动带 JSESSIONID Cookie。
 
-const DEFAULT_CONFIG = {
-    apiBase: "https://你的后端域名.example.com", // 你的后端基址（占位）
-    apiPath: "/api/timetable/import",            // 接收课表数据的接口路径（占位）
-    token: "请在扩展设置页填写",                  // Bearer Token（占位）
-    defaultXNXQDM: "",                           // 例如：2025-2026-1
-    defaultXH: ""                                // 学号
-};
 
 function sleep(ms) {
     return new Promise((r) => setTimeout(r, ms));
