@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "教务课表同步助手",
+  "version": "0.1.0",
+  "description": "在教务系统页面一键拉取课表，并同步到个人网站后端。",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://jwxt.szpu.edu.cn/*",
+    "https://你的后端域名.example.com/*"
+  ],
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://jwxt.szpu.edu.cn/jwapp/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
